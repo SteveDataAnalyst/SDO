@@ -3,7 +3,7 @@ scam_question_data = [
      "text": "You received an email that stated that you can claim a huge inheritance of 5 million dollars from a "
              "distant relative. \nBut you have to pay a small administrative fees of 500 dollars first.",
      "question": "What should you do?",
-     "selection": ["Pay them immediately. It's a small amount compared to 5 millions dollars", "Ignore and delete the email"],
+     "selection": ["Ignore and delete the email", "Pay them immediately. It's a small amount compared to 5 millions dollars"],
      "answer": "Ignore and delete the email",
      "why": "This is known as Inheritance Scam"
             "\n1) If something sounds too good to be true, it is probably a scam"
@@ -21,7 +21,7 @@ scam_question_data = [
     {"image": "https://sgscamcheck.com/wp-content/uploads/2022/04/image-removebg-preview-3.png",
      "text": "You receive a message that your phone has been hacked and they threaten to release your personal videos to your friends and relatives. You are asked to pay them to stop them from releasing the video",
      "question": "What should you do ?",
-     "selection": ["Believe what they claimed and pay them accordingly", "Just ignore the message"],
+     "selection": ["Just ignore the message", "Believe what they claimed and pay them accordingly"],
      "answer": "Just ignore the message",
      "why": "\nThis is commonly known as Cyber Extortion Scam."
             "\nRemember : \n1) Do not trust strangers with photos and videos of you"
@@ -30,7 +30,7 @@ scam_question_data = [
     {"image": "https://www.copcommunitysg.com/images/copcommunitysg-Impersonation-scams.jpg",
      "text": "You receive a phone call in computerized voice saying it is calling from Police Force. It said you are under investigation of a suspicious activity and asking you to press '1' in order to find out more",
      "question": "Do you press '1' to talk to them?",
-     "selection": ["Hang up the phone immediately","Press '1' on your keypad to find out what is going on"],
+     "selection": ["Press '1' on your keypad to find out what is going on", "Hang up the phone immediately"],
      "answer": "Hang up the phone immediately",
      "why": "\nThis is commonly known as Impersonation Scam."
             "\n1) Look out for number with a '+' in front. Don't pick up calls from these numbers unless "
@@ -117,7 +117,7 @@ scam_question_data = [
     {"image": "https://micdn-13a1c.kxcdn.com/images/sg/content-images/social_media_scam.jpg",
     "text": "You answer a phone call from a number starting with '+65'. It is an automated voice message from Singapore’s Ministry of Health (MOH), and it prompts you to press a number to speak to an individual from MOH. ",
     "question": "What do you do next?",
-    "selection": ["Opt to speak with MOH officer", "Hang up the call"],
+    "selection": ["Hang up the call", "Opt to speak with MOH officer"],
     "answer": "Hang up the call",
     "why": "\nThis is commonly known as Impersonation Scam."
            "\n1) Look out for numbers with a '+' in front. Don't pick up calls from these numbers unless you're expecting an overseas call"
@@ -134,7 +134,7 @@ scam_question_data = [
     {"image": "https://sgscamcheck.com/wp-content/uploads/2022/04/Investment-Scam-Image-1024x439.jpeg",
     "text": "You come across an article about a new cryptocurrency investment launched by the China government. It’s endorsed by famous people such as Mr Elon Musk and National University of Singapore president Tan Eng Chye. ",
     "question": "What do you do?",
-    "selection": ["Invest Immediately", "Ignore the article"],
+    "selection": ["Ignore the article", "Invest Immediately"],
     "answer": "Ignore the article",
     "why": "\nThis is commonly known as Investment Scam."
            "\n1)Scammers may create fake articles about lucrative investment opportunities that look like they are from real news websites."
@@ -142,7 +142,7 @@ scam_question_data = [
     {"image": "https://github.com/SteveDataAnalyst/SDO/raw/main/quiz-pics/q17.jpg",
     "text": "You received the message from an unknown source",
     "question": "Should you reply the message ?",
-    "selection": ["Ignore the message", "Reply the message to show your interest"],
+    "selection": ["Reply the message to show your interest", "Ignore the message"],
     "answer": "Ignore the message",
     "why": "\nThis is commonly known as a Job Scam."
            "\n1) Job offers that promise high returns for minimal efforts are usually scams"
@@ -160,7 +160,7 @@ scam_question_data = [
     {"image": "https://github.com/SteveDataAnalyst/SDO/raw/main/quiz-pics/q19.jpg",
      "text": "You received the message from an unknown source",
      "question": "Should you try your luck to get the job offer ?",
-     "selection": ["Ignore the message", "Reply the message to show your interest"],
+     "selection": ["Reply the message to show your interest", "Ignore the message"],
      "answer": "Ignore the message",
      "why": "\nThis is commonly known as a Job Scam."
             "\n1) Job offers that promise high returns for minimal efforts are usually scams"
@@ -169,7 +169,7 @@ scam_question_data = [
     {"image": "https://github.com/SteveDataAnalyst/SDO/raw/main/quiz-pics/q20.jpg",
      "text": "You received the message from an unknown source",
      "question": "Should you click on the link to reactivate the singapass ?",
-     "selection": ["Click on the click to reactivate the Singpass", "Don't click anything. Delete the message right away"],
+     "selection": ["Don't click anything. Delete the message right away", "Click on the click to reactivate the Singpass"],
      "answer": "Don't click anything. Delete the message right away",
      "why": "\nThis is known as a phishing message"
             "\n1) Do not trust links or emails that claim to be from the government sector but do not have 'gov.sg' in them"
@@ -186,8 +186,7 @@ scam_question_data = [
     {"image": "https://github.com/SteveDataAnalyst/SDO/raw/main/quiz-pics/q22.jpg",
      "text": "You received the message from an unknown source",
      "question": "Should you call the number or click on the link ?",
-     "selection": ["Call the number to let them know find out more",
-                   "Delete the message from your phone"],
+     "selection": ["Delete the message from your phone", "Call the number to let them know find out more"],
      "answer": "Delete the message from your phone",
      "why": "\nThis is known as a phishing message"
             "\n1) Do not click on any attachment or link in message as it often leads to install virus or malware into your devices. Ignore and delete it."
@@ -204,9 +203,7 @@ scam_question_data = [
     {"image": "https://github.com/SteveDataAnalyst/SDO/raw/main/quiz-pics/q24.jpg",
      "text": "You received the message from an unknown source",
      "question": "Should you click on the link to get the refund ?",
-     "selection": [
-         "Click on the link to get the refund",
-         "Ignore the message"],
+     "selection": [ "Ignore the message", "Click on the link to get the refund"],
      "answer": "Ignore the message",
      "why": "\nThis is known as a phishing message"
             "\n1) Do not click on any attachment or link in message as it often leads to install virus or malware into your devices. Ignore and delete it."
@@ -254,9 +251,7 @@ scam_question_data = [
     {"image": "https://github.com/SteveDataAnalyst/SDO/raw/main/quiz-pics/q29.jpg",
      "text": "You received the message from an unknown source",
      "question": "How would you respond ?",
-     "selection": [
-         "Ignore this group and leave",
-         "Follow his investment advice"],
+     "selection": ["Follow his investment advice", "Ignore this group and leave"],
      "answer": "Ignore this group and leave",
      "why": "\nThis is commonly known as Investment Scam."
             "\n1) Promises high profits that are too good to be true"

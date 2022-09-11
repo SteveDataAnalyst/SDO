@@ -1,7 +1,6 @@
 from data import scam_question_data, general_question_data
 from question_model import Question
 import streamlit as st
-import pandas as pd
 from datetime import date
 from random import randint
 from streamlit_extras.switch_page_button import switch_page
@@ -24,6 +23,7 @@ def set_page():
                   color:tomato;
                   padding:5px;
                   top:3px;
+    
     }
     </style> """, unsafe_allow_html=True)
 
@@ -32,7 +32,7 @@ def main_page():
     placeholder1 = st.empty()
     with placeholder1.container():
         st.title("Quiz for Prize (Marine Parade)")
-        st.image("https://www.imda.gov.sg/-/media/Imda/Images/Home/Banner/2020/SGDOfficePage_Carousel.jpg")
+        st.image("https://raw.githubusercontent.com/SteveDataAnalyst/SDO/898829ba435d8b66ece06b1e4d2c815436d239bc/Banner1.JPG")
         string_1 = '<p style="font-family:sans-serif; color:White; font-size: 30px;">We have 10 questions to test ' \
                    'your awareness on cybersecurity and cyber hygiene practices.</p> '
         string_2 = '<p style="font-family:sans-serif; color:White; font-size: 30px;">Try our quiz to find out if you ' \
@@ -41,32 +41,27 @@ def main_page():
         st.markdown(string_2, unsafe_allow_html=True)
         st.write("")
         st.write("")
+        st.image(
+            "https://www.csa.gov.sg/-/media/Csa/Images/Programmes/SG-Cyber-Safe-Seniors/How-Cyber-Safe-Are"
+            "-You-Quiz-Banner_600px.jpg")
         with st.form("Senior_details"):
             col1, col2, col3 = st.columns([1, 5, 1])
             with col1:
                 st.write("")
             with col2:
-                st.image(
-                    "https://www.csa.gov.sg/-/media/Csa/Images/Programmes/SG-Cyber-Safe-Seniors/How-Cyber-Safe-Are"
-                    "-You-Quiz-Banner_600px.jpg",
-                    width=1000)
-                string_3 = '<p style="font-family:sans-serif; color:White; font-size: 30px;">Please enter your details</p>'
-                string_4 = '<p style="font-family:sans-serif; color:White; font-size: 30px;">Then, click on the ' \
+                string_3 = '<p style="font-family:sans-serif; font-size: 30px;">Please enter your details</p>'
+                string_4 = '<p style="font-family:sans-serif; font-size: 30px;">Then, click on the ' \
                            'Submit button to begin!</p> '
                 st.markdown(string_3, unsafe_allow_html=True)
                 st.markdown(string_4, unsafe_allow_html=True)
-                senior_name = st.text_input("Name(As Per NRIC)")
-                ic_number = st.text_input("IC(Last 4 Digits)", max_chars=4)
-                hp_number = st.text_input("Contact Number(Optional)")
+                senior_name = st.text_input("Display Name:")
                 submitted = st.form_submit_button("Submit")
             with col3:
                 st.write("")
 
-    if (len(senior_name) != 0) and (len(ic_number) != 0) and submitted:
-        if 'senior_name' and 'ic_number' and 'scores' and 'hp_number' and 'correctness' not in st.session_state:
+    if (len(senior_name) != 0) and submitted:
+        if 'senior_name' and 'scores' and 'correctness' not in st.session_state:
             st.session_state['senior_name'] = senior_name
-            st.session_state['ic_number'] = ic_number
-            st.session_state['hp_number'] = hp_number
             st.session_state['scores'] = 0
             st.session_state['correctness'] = False
         placeholder1.empty()
