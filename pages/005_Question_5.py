@@ -7,7 +7,6 @@ set_page()
 if "load_state_5" not in st.session_state:
     st.session_state["load_state_5"] = False
 scoring = st.session_state['scores']
-st.write(scoring)
 top1, top2, top3 = st.columns([5,9,5])
 with top1:
     st.header(f"Name: {st.session_state['senior_name']}")
@@ -15,17 +14,8 @@ with top1:
 question_no = st.session_state['scam_question_list']
 image, text, ask, select, answer, reason = st.session_state['scam_operation'].return_values(question_no[4])
 
-mid1, mid2, mid3 = st.columns([5, 5, 5])
-with mid2:
-    st.image(image, width=400)
-st.markdown("""
-<style>
-.big-font {
-    font-size:40px !important;
-}
-</style>
-""", unsafe_allow_html=True)
-st.markdown(f'<p class="big-font">{text}</p>', unsafe_allow_html=True)
+st.image(image, width=400)
+st.markdown(text)
 placeholder1 = st.empty()
 with placeholder1.container():
     with st.form("Question"):
@@ -44,6 +34,7 @@ if submit_answer or st.session_state.load_state_5:
         st.session_state['correctness'] = True
     else:
         st.error(f"That's incorrect. Score: {scoring}")
+        st.error(f"Please find the Digital Ambassador for assistance on Scam Question: {question_no[4]+1}")
         st.session_state['correctness'] = False
     st.write(reason)
     st.session_state['scores'] = scoring
