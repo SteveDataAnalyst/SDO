@@ -31,13 +31,17 @@ if submit_answer or st.session_state.load_state_9:
     if answer_select == answer:
         scoring += 1
         st.success(f"Correct! Score: {scoring}")
-        st.session_state['correctness'] = True
+        correctness = "Right"
     else:
         st.error(f"That's incorrect. Score: {scoring}")
         st.error(f"Please find the Digital Ambassador for assistance on General Question: {question_no[1]+1}")
-        st.session_state['correctness'] = False
+        correctness = "Wrong"
+    question_number = question_no[1]+1
+
     st.write(reason)
     st.session_state['scores'] = scoring
+
     submit_qns = st.button("Next Question")
     if submit_qns:
+        st.session_state.df.append({"Question_type": "general", "Question_number": question_number, "Correctness": correctness})
         switch_page("question 10")
