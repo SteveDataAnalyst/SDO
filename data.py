@@ -111,8 +111,7 @@ scam_question_data = [
     "question": "What should you do ?",
     "selection": ["Call the number listed on the Google Search website", "Don't trust the google search result. Find the official bank website to find out the actual phone number"],
     "answer": "Don't trust the google search result. Find the official bank website to find out the actual phone number",
-    "why": "\nCongratulations! You just prevented yourself from being scammed."
-           "\n1) Always verify the bank's phone number with numbers listed on your official bank website, or behind the official card issued by the bank"
+    "why": "\n1) Always verify the bank's phone number with numbers listed on your official bank website, or behind the official card issued by the bank"
            "\n2) Number found on Google might be a scam advertisement with a fake hotline"},
     {"image": "https://micdn-13a1c.kxcdn.com/images/sg/content-images/social_media_scam.jpg",
     "text": "You answer a phone call from a number starting with '+65'. It is an automated voice message from Singapore’s Ministry of Health (MOH), and it prompts you to press a number to speak to an individual from MOH. ",
@@ -277,7 +276,7 @@ general_question_data = [
      "answer": "False",
      "why": "\n1) For every software, it is only a matter of time before hackers find a loophole within the system."
             "\n2) So, the best bet is to stay several steps ahead by installing new updates to cover the loophole."},
-    {"image": "https://activeloc.com/wp-content/uploads/2021/03/google_translate_main-1280x720-1.jpg",
+    {"image": "https://www.howtogeek.com/wp-content/uploads/2021/12/google-translate-app-icon-smartphone.jpg?width=1198&trim=1,1&bg-color=000&pad=1,1",
      "text": "Google Translate should never be used for translating highly sensitive content that contains personal and sensitive data or other important information ",
      "question": "Is the statement True or False?",
      "selection": ["True", "False"],

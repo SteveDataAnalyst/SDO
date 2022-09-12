@@ -1,12 +1,13 @@
 from data import scam_question_data, general_question_data
 from question_model import Question
 import streamlit as st
-from datetime import date
+import pandas as pd
+from datetime import datetime
 from random import randint
 from streamlit_extras.switch_page_button import switch_page
 
-today = date.today()
-
+now = datetime.now()
+date_now = now.strftime("%d/%m/%Y")
 
 def set_page():
     st.set_page_config(initial_sidebar_state="collapsed",
@@ -60,10 +61,12 @@ def main_page():
                 st.write("")
 
     if (len(senior_name) != 0) and submitted:
-        if 'senior_name' and 'scores' and 'correctness' not in st.session_state:
+        if 'senior_name' and 'scores' and 'correctness' and 'df' not in st.session_state:
             st.session_state['senior_name'] = senior_name
             st.session_state['scores'] = 0
             st.session_state['correctness'] = False
+            st.session_state['df'] = []
+        st.session_state.df.append({"Attempted_date": date_now, "Names": senior_name})
         placeholder1.empty()
         switch_page("question 1")
 
@@ -142,6 +145,7 @@ if __name__ == "__main__":
     if 'scam_operation' and 'general_operation' not in st.session_state:
         st.session_state['scam_operation'] = scam_operation
         st.session_state['general_operation'] = general_operation
+
     main_page()
 
 
