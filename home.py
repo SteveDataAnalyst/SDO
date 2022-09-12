@@ -34,9 +34,9 @@ def main_page():
     with placeholder1.container():
         st.title("Quiz for Prize (Marine Parade)")
         st.image("https://raw.githubusercontent.com/SteveDataAnalyst/SDO/898829ba435d8b66ece06b1e4d2c815436d239bc/Banner1.JPG")
-        string_1 = '<p style="font-family:sans-serif; color:White; font-size: 30px;">We have 10 questions to test ' \
+        string_1 = '<p style="font-family:sans-serif; font-size: 30px;">We have 10 questions to test ' \
                    'your awareness on cybersecurity and cyber hygiene practices.</p> '
-        string_2 = '<p style="font-family:sans-serif; color:White; font-size: 30px;">Try our quiz to find out if you ' \
+        string_2 = '<p style="font-family:sans-serif; font-size: 30px;">Try our quiz to find out if you ' \
                    'are cyber safe ready!</p> '
         st.markdown(string_1, unsafe_allow_html=True)
         st.markdown(string_2, unsafe_allow_html=True)
